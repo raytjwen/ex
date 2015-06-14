@@ -1,4 +1,61 @@
 require('/Users/apple/ex/__log.js');
+var _ = require('/Users/apple/ex/node_modules/underscore/underscore.js');
+
+//_.each({age: 24, gender: 'male'}, function (value, key) { console.log(key+': '+value); });
+
+//console.log(isFinite(3));
+//console.log(isFinite(10/0));
+
+
+//var countDownFrom = function (num) {
+//    console.log(num);
+//    num--;
+//    if (num < 0) { return false}
+//    countDownFrom(num);
+//};
+//
+//countDownFrom(5);
+
+//var foo = function () {
+//    var bar = function () {
+//        console.log(this);    
+//    }();
+//    console.log(this);
+//}();
+
+//(function (msg) { console.log(msg); }('Hi'));
+
+//var n = new Object(1);
+//console.log(n === 1);
+//console.log(typeof 1);
+
+//var myFunction = function (z, s, d) {
+//    //return arguments.length;    
+//    //return myFunction.length;
+//    return arguments.callee.length;
+//}
+//console.log(myFunction());
+
+//Object.prototype.foo = 'bar';
+//var cody = new Object();
+//console.log(cody);
+//console.log(cody.foo);
+
+
+//var d = new Date();
+//console.log(d.toLocaleString());
+
+//console.log(typeof new Object(true));
+
+//var cody; 
+//cody = {
+//    age: 24,
+//    gender: 'male'        
+//};
+//
+//for (var key in cody) {
+//    console.log(cody.propertyIsEnumerable('age'));    
+//}
 
 var Person = function Person (living, age, gender) {
     this.living = living;
@@ -6,11 +63,11 @@ var Person = function Person (living, age, gender) {
     this.gender = gender;
     this.getGender = function () { return this.gender; };
 };
-Person.prototype.sayHi = function () { console.log('Hi'); };
+
 console.log(Person.prototype);
 var cody = new Person(true, 33, 'male');
 console.log(cody);
-cody.sayHi();
+//cody.sayHi();
 //var lisa = new Person(true, 34, 'female');
 //console.log(lisa);
 //console.log(cody.constructor);
@@ -19,13 +76,13 @@ cody.sayHi();
 //var a = ['xx', 'oo'];
 //console.log(a.constructor.prototype);
 
-console.log(Array.prototype.join);
+//console.log(Array.prototype.join);
 
-var aaa = {p1: 'foo'};
-var bbb = Object.create(aaa);
-//bbb.p2 = 'booo';
-console.log(aaa);
-console.log(bbb.constructor.prototype);
+//var aaa = {p1: 'foo'};
+//var bbb = Object.create(aaa);
+////bbb.p2 = 'booo';
+//console.log(aaa);
+//console.log(bbb.constructor.prototype);
 //bbb.p1 = 'abc';
 //for (var x in bbb) {
 //    console.log(bbb[x]);
